@@ -18,7 +18,7 @@ public class UsuarioDao {
     private ResultSet rs;
     private String sql;
     
-    public UsuarioDAO() {
+    public UsuarioDao() {
         db = new DataBase();
     }
     
