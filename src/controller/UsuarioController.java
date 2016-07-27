@@ -19,7 +19,7 @@ public class UsuarioController {
             }
         }
         return false;
-    }
+    } 
     
     
     public boolean editar(Usuario usuario){
