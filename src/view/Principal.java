@@ -79,15 +79,23 @@ public class Principal extends JFrame{
         String login = tfLogin.getText();
         String senha = String.valueOf(pfSenha.getPassword());
         UsuarioController controller = new UsuarioController();
-        if (controller.login(login, senha)) {
-            frame.setVisible(false);
+        //if (controller.login(login, senha)) {
+        //    frame.setVisible(false);
             UsuarioGUI.run();
-        } else {
-            JOptionPane.showMessageDialog(null, "Login ou Senha incorretos!");
-            limpar();
-        }
+//        } else {
+//            JOptionPane.showMessageDialog(null, "Login ou Senha incorretos!");
+//            limpar();
+//        }
     }
    
+    
+    
+    
+    
+    
+    
+    
+    
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
