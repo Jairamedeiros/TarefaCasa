@@ -9,9 +9,6 @@ import java.util.List;
 import model.Usuario;
 
 
-
-
-
 public class UsuarioDao {
     private final DataBase db;
     private PreparedStatement ps;
@@ -158,13 +155,4 @@ public class UsuarioDao {
     }
     
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
 

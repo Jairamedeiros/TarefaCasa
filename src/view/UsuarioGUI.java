@@ -7,7 +7,6 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class UsuarioGUI extends JFrame{
-    
     private Container contentPane;
     private JMenuBar mnBarra;
     private JMenu mnArquivo;
@@ -57,6 +56,25 @@ public class UsuarioGUI extends JFrame{
                 contentPane.validate();
             }
         });
+        miEditar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UsuarioEditarGUI editar = new UsuarioEditarGUI();
+                contentPane.removeAll();
+                contentPane.add(editar);
+                contentPane.validate();
+            }
+        });
+        miExcluir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UsuarioExcluirGUI excluir = new UsuarioExcluirGUI();
+                contentPane.removeAll();
+                contentPane.add(excluir);
+                contentPane.validate();
+            }
+        });
+        
     }
     
     public static void run() {
@@ -68,14 +86,5 @@ public class UsuarioGUI extends JFrame{
         frame.setLocation(x, y);
         frame.setVisible(true);
     }
-    
 }
-    
-    
-    
-    
-    
-    
-    
-    
-
+   

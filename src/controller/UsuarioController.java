@@ -21,18 +21,34 @@ public class UsuarioController {
         return false;
     }
     
+    
+    public boolean editar(Usuario usuario){
+         if (dao.findById(usuario.getId()) == null) {
+            if (dao.update(usuario)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public boolean excluir(Usuario usuario){
+         if (dao.findById(usuario.getId()) == null) {
+            if (dao.delete(usuario)){
+                return true;
+            }
+        }
+         return false;
+    }
+     
+  
+    
     public boolean login(String login, String senha) {
         Usuario usuario = dao.findByLogin(login);
         if (usuario != null && usuario.getLogin().equals(login) && usuario.getSenha().equals(senha)) {
             return true;
         }
         return false;
-    }
-    
-    
-  
-    
-    
+    } 
     
 }
     
